@@ -1,3 +1,4 @@
+import 'package:farmacia/layout.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -77,6 +78,18 @@ class LoginScreen extends StatelessWidget {
                       decoration: const ShapeDecoration(
                         color: Color(0xFF1877F2),
                         shape: CircleBorder(),
+                        shadows: [
+                          BoxShadow(
+                            color: Colors.black12,
+                            offset: Offset(0, 2),
+                            blurRadius: 3.0,
+                          ),
+                          BoxShadow(
+                            color: Colors.black26,
+                            offset: Offset(0, 2),
+                            blurRadius: 3.0,
+                          ),
+                        ],
                       ),
                       child: IconButton(
                         icon: const Icon(Icons.facebook),
@@ -88,11 +101,24 @@ class LoginScreen extends StatelessWidget {
                       width: 54.0,
                       height: 54.0,
                       decoration: const ShapeDecoration(
-                        color: Colors.black12,
+                        color: Colors.white,
                         shape: CircleBorder(),
+                        shadows: [
+                          BoxShadow(
+                            color: Colors.black12,
+                            offset: Offset(0, 2),
+                            blurRadius: 3.0,
+                          ),
+                          BoxShadow(
+                            color: Colors.black26,
+                            offset: Offset(0, 2),
+                            blurRadius: 3.0,
+                          ),
+                        ],
                       ),
                       child: IconButton(
-                        icon: const Icon(Icons.headphones),
+                        icon:
+                            Image.asset('assets/images/icons/google_logo.png'),
                         color: Colors.black,
                         onPressed: () {},
                       ),
@@ -103,6 +129,18 @@ class LoginScreen extends StatelessWidget {
                       decoration: const ShapeDecoration(
                         color: Colors.black,
                         shape: CircleBorder(),
+                        shadows: [
+                          BoxShadow(
+                            color: Colors.black12,
+                            offset: Offset(0, 2),
+                            blurRadius: 3.0,
+                          ),
+                          BoxShadow(
+                            color: Colors.black26,
+                            offset: Offset(0, 2),
+                            blurRadius: 3.0,
+                          ),
+                        ],
                       ),
                       child: IconButton(
                         icon: const Icon(Icons.apple),
@@ -129,7 +167,14 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MainLayoutScreen(),
+                      ),
+                    );
+                  },
                   child: const Text('Iniciar Sesión'),
                 ),
               )
